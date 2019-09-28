@@ -1,0 +1,1 @@
+﻿Start-Process "chrome.exe" -ArgumentList '--new-window https://www.reddit.com https://www.twitch.tv https://canopy.uc.edu/webapps/login/?action=relogin' #opens tabs of each of the sites listed, calls for chrome to open them
