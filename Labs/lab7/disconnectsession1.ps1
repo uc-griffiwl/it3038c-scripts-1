@@ -1,0 +1,1 @@
+﻿Remove-SSHSession -Index 0 -Verbose

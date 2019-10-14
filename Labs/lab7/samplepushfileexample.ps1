@@ -1,0 +1,1 @@
+﻿Set-SCPFile -LocalFile C:\Users\Administrator\Documents\lab7.txt -RemotePath "/home/cechuser/lab7/testinglab7" -ComputerName 192.168.33.108 -Credential (Get-Credential cechuser)
