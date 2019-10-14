@@ -52,7 +52,7 @@ Invoke-SSHCommand -Index 0 -command "uname -a; cd /; pwd; ls-l
 
 # Uploading / Downloading Files
 
-This module also comes with SFTP support. Example code for how it is used:
+This module also comes with SFTP support. Example code for how it is used
 Upload
 ```javascript
 Set-SCPFile -LocalFile C:\Users\Administrator\Documents\lab7.txt -RemotePath "/home/cechuser/lab7/testinglab7" -ComputerName 192.168.33.108 -Credential (Get-Credential cechuser)
