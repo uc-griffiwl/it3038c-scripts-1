@@ -1,13 +1,17 @@
 import requests, re
 from bs4 import BeautifulSoup
 
-result = requests.get ("https://www.shopballers.com/").content
-src = result.content
-soup = BeautifulSoup(r, 'html.parser')
+r = requests.get ("https://www.shopballers.com/").content
 
-tshirtnames =soup.findALL("h3") #only the titles of shirts are h3
-    print(tshirtnames)
-tags = soup.findALL("div", {"class":re.compile('(prod-price)')})
-    print(tags)
+soup = BeautifulSoup(r, 'lxml')
+tags = soup.findALL("a", {"href":re.compile('(products)')})
+for a in tags:
+    print(a.get('href'))
+
+
+#tshirtnames =soup.findALL("h3") #only the titles of shirts are h3
+#print(tshirtnames)
+#tags = soup.findALL("div", {"class":re.compile('(prod-price)')})
+#print(tags.text)
    
 
