@@ -1,7 +1,9 @@
 # Final Project - Creating a SQL Database with Powershell Script and adding Schema/Tables to the Database
 
 This script will automatically create a SQL database simply by running it
+
 You must have SQL Database installed
+
 You must have integrated security enabled (should be already)
 
 
