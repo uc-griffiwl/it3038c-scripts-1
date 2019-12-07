@@ -40,7 +40,7 @@ $Reader = $SCommand.ExecuteReader();
 
 $Reader.Close();
 ```
-#Creating the Database
+# Creating the Database
 
 Here we make a new variable "creater" that actually creates the database and make a new variable "SCommand" (same name, new variable) that runs the variables
 creater and connect on the object
@@ -51,7 +51,7 @@ $SCommand = New-Object Data.SqlClient.SqlCommand $Creater, $Connect;
 $SCommand.ExecuteNonQuery();     
 ```
 
-#Wait for the Database to Create
+# Wait for the Database to Create
 
 This will make the script wait for 20 seconds
 
@@ -63,7 +63,7 @@ So we know the database was created
 ```javascript
 Write-Host "The Database $SqlDBname has been created";
 ```
-#Now we get into adding Schema/Tables
+# Now we get into adding Schema/Tables
 
 Here we make a couple variables we will need to call to hit SQL
 
@@ -71,7 +71,7 @@ Here we make a couple variables we will need to call to hit SQL
 $MSM = 'Microsoft.SqlServer.Management.Smo'
 $Server = new-object ("$MSM.Server") 
 ```
-#Data Types for our table
+# Data Types for our table
 
 Here we make variables for our SQL data types that we will use, there are others but we will just use two
 
@@ -79,12 +79,12 @@ Here we make variables for our SQL data types that we will use, there are others
 $DBint = [Microsoft.SqlServer.Management.Smo.Datatype]::Int 
 $DBdatetime = [Microsoft.SqlServer.Management.Smo.Datatype]::DateTime
 ```
-#Specify the database we want to edit (the one just made above)
+# Specify the database we want to edit (the one just made above)
 
 ```javascript 
 $Database = $Server.Databases["DatabaseFromScript"] 
 ```
-#Schema
+# Schema
 
 Here we define the variables for the schema
 
@@ -103,7 +103,7 @@ Add this to confirm schema was made
 ```javascript
 Write-Host "Schema created, Named: $SchemaName"
 ```
-#Making the table and adding Columns 
+# Making the table and adding Columns 
 
 Specify our table
 
